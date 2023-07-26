@@ -1,0 +1,92 @@
+/* reg.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 40px; /* Adjust the height as needed */
+  position: relative; /* Required for pseudo-elements */
+}
+
+/* Style the form heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add some spacing between form elements */
+br {
+  line-height: 0;
+}
+
+/* Style the input field placeholder symbols */
+input::before {
+  content: "\f007"; /* Unicode for a user symbol (fontawesome user icon) */
+  font-family: Arial, FontAwesome; /* Use FontAwesome as a fallback font */
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+}
+
+input[type="email"]::before {
+  content: "\f0e0"; /* Unicode for an envelope symbol (fontawesome envelope icon) */
+}
+
+input[type="password"]::before {
+  content: "\f023"; /* Unicode for a lock symbol (fontawesome lock icon) */
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Center the form on small screens */
+@media (max-width: 500px) {
+  form {
+    max-width: 90%;
+  }
+}

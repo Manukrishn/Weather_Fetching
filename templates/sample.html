@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Search</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'search.css' %}">
+</head>
+</head>
+<body>
+    <h2>Weather Search</h2>
+    <form method="post" action="fetch_data">
+        {% csrf_token %}
+        <h3>Welcome {{user}} to Weather App</h3>
+        <input type="text" name="city" id="city" placeholder="Enter city" required>
+        <input type="submit" value="Search">
+        <br>
+        <br>
+        {{error}}
+    </form>
+</body>
+</html>

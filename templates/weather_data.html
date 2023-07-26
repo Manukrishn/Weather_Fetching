@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Data</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'weather.css' %}">
+</head>
+<body>
+    <form action="logout">
+        <div class="weather-data">
+            <h1>Weather Condition</h1>
+            <p>Main: {{ weather_data.main }}</p>
+            <img src="{{ weather_data.icon }}" alt="Weather Icon">
+            <p class="temperature">Temperature: {{ weather_data.temp }}°C</p>
+        </div>
+        <input type="submit" value="Logout">
+    </form>
+</body>
+</html>
+
+

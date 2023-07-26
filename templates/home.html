@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+</head>
+<body>
+    <h1>Welcome to weather app</h1>
+    <form>
+        <input type="submit" value="register" formaction="weather_api/register">
+        <input type="submit" value="login" formaction="weather_api/login">
+    </form>
+</body>
+</html>
